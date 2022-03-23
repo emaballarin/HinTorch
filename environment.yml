@@ -1,0 +1,66 @@
+name: HinTorch
+
+channels:
+  # Keep sorted | Add at the bottom!
+  - pytorch
+  - pytorch-test
+  - fastai
+  - nvidia
+  - defaults
+  - conda-forge
+  - numba
+  - gpytorch
+  - dglteam
+  - pyviz
+  - plotly
+  - bokeh
+  - cvxgrp
+  - HuggingFace
+  - fastchan
+  - comet_ml
+  - intel
+  - nlesc
+
+dependencies:
+  # System
+  - python=3.9.10
+  - cudatoolkit=11.3
+  - magma-cuda113>=2.5.2
+  - blas=*.*=mkl
+
+  # PyTorch stack
+  - pytorch>=1.11
+  - torchvision>=0.12
+
+  # Scientific stack
+  - numpy
+  - matplotlib
+
+  # Jupyter
+  - jupyterlab>=3.3.1
+  - notebook>=6.4.8
+  - ipykernel
+  - ipython
+  - ipython_genutils
+  - ipywidgets
+  - jupyter
+  - jupyter_client
+  - jupyter_console
+  - jupyter_core
+  - jupyterlab_launcher
+  - jupyterlab_server
+  - nb_conda_kernels
+  - nbclient
+  - nbconvert
+  - nbformat
+  - widgetsnbextension
+  - jupyter_contrib_nbextensions
+  - ipyparallel
+  - jupyter_nbextensions_configurator
+  - nbval
+
+  # PIP #
+  - pip:
+      - git+https://github.com/emaballarin/ebtorch.git
+      - git+https://github.com/nengo/nengo.git
+      - git+https://github.com/emaballarin/nengolib.git
