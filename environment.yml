@@ -60,6 +60,9 @@ dependencies:
   - jupyter_nbextensions_configurator
   - nbval
 
+  # Other requirements
+  - joblib
+
   # PIP #
   - pip:
       - git+https://github.com/emaballarin/ebtorch.git
