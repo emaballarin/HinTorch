@@ -37,8 +37,10 @@ dependencies:
   - cudnn
 
   # PyTorch stack
-  - pytorch>=1.11
-  - torchvision>=0.12
+  - pytorch>=1.12.1
+  - pytorch-cuda=11.7
+  - pytorch-mutex=*.*=cuda
+  - torchvision>=0.13.1
 
   # Scientific stack
   - numpy
