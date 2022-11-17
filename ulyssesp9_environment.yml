@@ -1,0 +1,173 @@
+name: HinTorchP9
+
+# Leave channels in such order!
+channels:
+  - emaballarin
+  - https://ftp.osuosl.org/pub/open-ce/1.7.2/
+  - nvidia
+  - HuggingFace
+  - defaults
+  - conda-forge
+
+dependencies:
+  # SYSTEM: Python
+  - python>=3.10 # Determine completely by hand
+
+  # SYSTEM: CUDA
+  - cudatoolkit=11.4.4 # Latest available from Open-CE
+  - cuda-runtime=11.4
+  - cuda-nvcc=11.4
+  - cudacompat=510.85.02
+  - cuda-libraries=11.4
+  - cuda-libraries-dev=11.4
+  - cuda-cudart=11.4
+  - cuda-cudart-dev=11.4
+  - libcusparse=11.6 # Not less than 11.6 is available
+  - libcusparse-dev=11.6 # Not less than 11.6 is available
+  - nccl>=2.12 # Leave floating
+  - cudnn>=8.3 # Leave floating
+
+  # SYSTEM: Compilers
+  - binutils_impl_linux-ppc64le
+  - binutils_linux-ppc64le
+  - gcc_impl_linux-ppc64le
+  - gcc_linux-ppc64le
+  - gfortran_impl_linux-ppc64le
+  - gfortran_linux-ppc64le
+  - gxx_impl_linux-ppc64le
+  - gxx_linux-ppc64le
+  - kernel-headers_linux-ppc64le
+  - ld_impl_linux-ppc64le
+  - libgcc-devel_linux-ppc64le
+  - libstdcxx-devel_linux-ppc64le
+  - sysroot_linux-ppc64le
+
+  # SYSTEM: Useful non-Python additions
+  - ninja>=1.10
+  - git>=2.34.1
+  - jpeg
+  - libpng>=1.6.37
+
+  # SYSTEM: Python package management
+  - conda>=22.9
+  - pip>=22.2
+  - pip-tools>=6.6
+  - importlib_metadata>=4.11.3
+  - setuptools>=65.5
+  - wheel>=0.37.1
+  - pep517>=0.12
+
+  # PYTHON: Useful additions
+  - dataclasses>=0.8
+  - regex>=2022.7
+  - rich>=12.5
+  - tqdm>=4.64.1
+
+  # PYTHON: Typing / type checking
+  - typeguard>=2.12
+  - mypy>=0.910
+  - mypy_extensions>=0.4.3
+  - typed-ast>=1.4.3
+  - typing_extensions>=4.3
+
+  # PYTHON: Parallelism
+  - joblib>=1.1
+  - multiprocess>=0.70.12.2
+  - threadpoolctl>=2.2
+
+  # SCIENTIFIC PYTHON: The usual suspects
+  - cython>=0.29.32
+  - numpy=1.23.3 # Latest available from emaballarin (or Anaconda, if it will ever be)
+  - numpy-base=1.23.3 # Latest available from emaballarin (or Anaconda, if it will ever be)
+  - scipy>=1.8.1
+  - matplotlib>=3.5.3
+  - pandas>=1.4.4
+  - scikit-learn>=1.1.3
+  - seaborn>=0.12
+  - statsmodels>=0.13.2
+  - sympy>=1.10.1
+
+  # SCIENTIFIC PYTHON: Extras
+  - opt_einsum>=3.3
+  - einops>=0.4.1
+
+  # DEEP LEARNING: PyTorch & Friends
+  - pytorch=1.12.1 # Latest available from Open-CE
+  - torchvision=0.13.1 # Latest available from Open-CE
+  - torchtext=0.13.1
+
+  # DEEP LEARNING: Pyro & co.
+  - linear_operator>=0.1.1
+  - pyro-ppl>=1.8.2
+  - pyro-api>=0.1.2
+  - gpytorch>=1.9
+
+  # DEEP LEARNING: Experiment tracking
+  - neptune-client>=0.16.11
+  - neptune-sklearn>=0.9.6
+  - neptune-notebooks>=0.9.3
+
+  # DEEP LEARNING: Pretrained models
+  - huggingface_hub>=0.6
+  - timm>=0.4.12
+  - pretrainedmodels>=0.7.4
+
+  # DEEP LEARNING: Hyperparameter tuning & optimisation
+  - optuna>=3.0.3
+  - bayesian-optimization>=1.3.1
+
+  # INTERACTIVE USE: Jupyter
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - ipython
+  - ipython_genutils
+  - ipywidgets
+  - jupyter
+  - jupyter_client
+  - jupyter_console
+  - jupyter_core
+  - jupyterlab_launcher
+  - jupyterlab_server
+  - nb_conda_kernels
+  - nbclient
+  - nbconvert
+  - nbformat
+  - widgetsnbextension
+  - jupyter_contrib_nbextensions
+  - ipyparallel
+  - jupyter_nbextensions_configurator
+  - nbval
+
+  # MISC:
+  - pillow>=9.2
+  - scikit-image>=0.19.2
+  - torchinfo>=1.7.1
+  - libjpeg-turbo>=2.1.4
+  - h5py>=3.6
+  - hdf5>=1.12.1
+  - texttable>=1.6.4
+  - llvmlite
+
+  - pip:
+      - git+https://github.com/bamos/block.git
+      - git+https://github.com/facebookresearch/higher.git
+      - git+https://github.com/facebookresearch/FDR_scheduler.git
+      - git+https://github.com/jonasrauber/eagerpy.git
+      - "git+https://github.com/getkeops/keops.git#subdirectory=pykeops"
+      - git+https://github.com/BorealisAI/advertorch.git
+      - git+https://github.com/emaballarin/ebtorch.git
+      - git+https://github.com/facebookresearch/qhoptim.git
+      - aiocsv>=1.2.2
+      - git+https://github.com/scardine/image_size.git
+      - git+https://github.com/huggingface/accelerate.git
+      - git+https://github.com/bethgelab/foolbox.git
+      - git+https://github.com/nengo/nengo.git
+      - git+https://github.com/emaballarin/nengolib.git
+      - git+https://github.com/emaballarin/nupic.torch.git
+      - git+https://github.com/patrick-kidger/sympytorch.git
+      - git+https://github.com/ChristophReich1996/SmeLU.git
+      - argparse>=1.4
+      - neptune-optuna
+      - git+https://github.com/fra31/auto-attack.git
+      - torchattacks
