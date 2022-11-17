@@ -23,10 +23,18 @@ channels:
 
 dependencies:
   # System
-  - python=3.9.10
-  - cudatoolkit=11.3
-  - magma-cuda113>=2.5.2
-  - blas=*.*=mkl
+  - python>=3.9.10
+  - cudatoolkit
+  - cuda-runtime
+  - cuda-nvcc
+  - cuda-libraries
+  - cuda-libraries-dev
+  - cuda-cudart
+  - cuda-cudart-dev
+  - libcusparse
+  - libcusparse-dev
+  - nccl
+  - cudnn
 
   # PyTorch stack
   - pytorch>=1.11
