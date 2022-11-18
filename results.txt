@@ -1,0 +1,74 @@
+~~~ MODEL: Original | INIT: Original | DATA: Imbalanced ~~~
+
+AVERAGE ACCURACY AT 50000 EPOCHS: 0.91628125 (Std. Dev.: 0.05100033509387463) over 500 runs
+AVERAGE ACCURACY AT HINTON POINT (1425 EPOCHS): 0.875 (Std. Dev.: 0.0) over 500 runs
+
+CONVERGED AT 50000 EPOCHS: 127 over 500 runs
+CONVERGED AT HINTON POINT (1425 EPOCHS): 0 over 500 runs
+
+AVERAGE EPOCHS UNTIL CONVERGENCE: 16375.370078740158 (Std. Dev.: 6585.987150974825)
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+~~~ MODEL: Original | INIT: Original | DATA: Balanced ~~~
+
+AVERAGE ACCURACY AT 50000 EPOCHS: 0.8852857142857143 (Std. Dev.: 0.10895670596851853) over 500 runs
+AVERAGE ACCURACY AT HINTON POINT (1425 EPOCHS): 0.5011428571428571 (Std. Dev.: 0.020562125872782788) over 500 runs
+
+CONVERGED AT 50000 EPOCHS: 167 over 500 runs
+CONVERGED AT HINTON POINT (1425 EPOCHS): 0 over 500 runs
+
+AVERAGE EPOCHS UNTIL CONVERGENCE: 20428.70658682635 (Std. Dev.: 8605.320359797597)
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+~~~ MODEL: Improved (Tnah/Sigmoid) | INIT: Modern | DATA: Balanced ~~~
+
+AVERAGE ACCURACY AT 50000 EPOCHS: 0.8449821428571429 (Std. Dev.: 0.12531559522107472) over 500 runs
+AVERAGE ACCURACY AT HINTON POINT (1425 EPOCHS): 0.8309464285714286 (Std. Dev.: 0.12664279041775697) over 500 runs
+
+CONVERGED AT 50000 EPOCHS: 129 over 500 runs
+CONVERGED AT HINTON POINT (1425 EPOCHS): 22 over 500 runs
+
+AVERAGE EPOCHS UNTIL CONVERGENCE: 10934.139534883721 (Std. Dev.: 13692.972660277375)
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+~~~ MODEL: ReLU/Sigmoid | INIT: Modern | DATA: Balanced ~~~
+
+AVERAGE ACCURACY AT 50000 EPOCHS: 0.7810892857142858 (Std. Dev.: 0.15377625356573846) over 500 runs
+AVERAGE ACCURACY AT HINTON POINT (1425 EPOCHS): 0.7775892857142856 (Std. Dev.: 0.15489820863478476) over 500 runs
+
+CONVERGED AT 50000 EPOCHS: 71 over 500 runs
+CONVERGED AT HINTON POINT (1425 EPOCHS): 69 over 500 runs
+
+AVERAGE EPOCHS UNTIL CONVERGENCE: 685.4366197183099 (Std. Dev.: 196.91084222499478)
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+~~~ MODEL: Mish/Sigmoid | INIT: Modern | DATA: Imbalanced ~~~
+
+AVERAGE ACCURACY AT 50000 EPOCHS: 0.9553125 (Std. Dev.: 0.05160604222133296) over 500 runs
+AVERAGE ACCURACY AT HINTON POINT (1425 EPOCHS): 0.88859375 (Std. Dev.: 0.025793557668291903) over 500 runs
+
+CONVERGED AT 50000 EPOCHS: 273 over 500 runs
+CONVERGED AT HINTON POINT (1425 EPOCHS): 17 over 500 runs
+
+AVERAGE EPOCHS UNTIL CONVERGENCE: 2745.5128205128203 (Std. Dev.: 1107.4173436029243)
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+~~~ MODEL: Mish/Sigmoid | INIT: Modern | DATA: Balanced ~~~
+
+AVERAGE ACCURACY AT 50000 EPOCHS: 0.9741607142857143 (Std. Dev.: 0.04141429479993) over 500 runs
+AVERAGE ACCURACY AT HINTON POINT (1425 EPOCHS): 0.9589642857142858 (Std. Dev.: 0.05205960820177625) over 500 runs
+
+CONVERGED AT 50000 EPOCHS: 315 over 500 runs
+CONVERGED AT HINTON POINT (1425 EPOCHS): 168 over 500 runs
+
+AVERAGE EPOCHS UNTIL CONVERGENCE: 2760.1809523809525 (Std. Dev.: 3977.7109005715934)
